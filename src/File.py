@@ -13,7 +13,7 @@ class File:
             self.file_dir_content[root] ={}
             self.file_dir_content[root]["dirs"] = dirs
             self.file_dir_content[root]["file_names"] = files
-            self.file_dir_content[root]["file_names_without_suffix"] =  os.path.splitext(files)[0]
+            self.file_dir_content[root]["file_names_without_suffix"] =  [os.path.splitext(file)[0] for file in files]
             self.file_dir_content[root]["files_path"] = [root+"/"+file for file in files]
             self.file_dir_content["root_name"].append(root)
             self.current_dir = current_dir
