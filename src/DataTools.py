@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
-from src.DB import  DB
+from DB import DB
 import pandas as pd
-from src.File import File
 class DataTools:
 
     db = None
@@ -35,7 +34,7 @@ class DataTools:
         return pd.read_sql(sql,self.db.engine)
 
 # demo
-
+# from File import File
 # dt = DataTools()
 # f = File("../data")
 # for file_name in f.get_file_names_without_suffix_in_current_dir():
