@@ -37,6 +37,6 @@ class File:
 
 # demo
 
-f = File("../data")
-
-print (f.get_file_names_with_path_in_current_dir())
+# f = File("../data")
+#
+# print (f.get_file_names_with_path_in_current_dir())

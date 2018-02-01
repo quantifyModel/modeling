@@ -43,6 +43,7 @@ class DB:
     def __del__(self):
         # 关闭数据库连接
         self.db.close()
+
     # data_path ：数据路径，路径内必须是csv文件，符合dataframe的格式要求，不能有其他文件
     # numOfcsv_in_one_table：一张表中存多少张csv文件数据
     # 每张表都会自动添加index字段，默认（default_fixed=True）会用来替换为csv的名字用于识别哪张csv
@@ -51,6 +52,7 @@ class DB:
                                                     default_fixed=True,fixed_function=None):
         f = File(data_path);i = 0;current_table = ""
         for file_name in f.get_file_names_without_suffix_in_current_dir():
+            if file_name =='.DS_Store' or int(file_name) < 600851: continue
             if i % numOfcsv_in_one_table == 0:
                 current_table = file_name
                 start_line = 0
@@ -80,5 +82,5 @@ class DB:
 
 # demo :
 
-a = DB("mysql","localhost", "root", "123456", "modeling")
-a.store_csv2db("../data",100)
+# a = DB("mysql","localhost", "root", "123456", "modeling")
+# a.store_csv2db("../data",100)
