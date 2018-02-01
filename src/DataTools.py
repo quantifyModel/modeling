@@ -36,9 +36,9 @@ class DataTools:
 
 # demo
 
-dt = DataTools()
-f = File("../data")
-for file_name in f.get_file_names_without_suffix_in_current_dir():
-    fixed_share_dataframe = dt.get_fixed_share(file_name).to_csv(file_name+".csv")
-    print (file_name)
+# dt = DataTools()
+# f = File("../data")
+# for file_name in f.get_file_names_without_suffix_in_current_dir():
+#     fixed_share_dataframe = dt.get_fixed_share(file_name).to_csv(file_name+".csv")
+#     print (file_name)
 
