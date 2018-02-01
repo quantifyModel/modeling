@@ -3,7 +3,7 @@
 import MySQLdb
 import pandas as pd
 from sqlalchemy import create_engine
-from src.File import File
+from src.db.File import File
 class DB:
     db = None
     cursor = None
@@ -83,4 +83,4 @@ class DB:
 # demo :
 
 # a = DB("mysql","localhost", "root", "123456", "modeling")
-# a.store_csv2db("../data",100)
+# a.store_csv2db("../../data",100)
